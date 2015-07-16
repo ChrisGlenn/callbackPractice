@@ -25,12 +25,14 @@ and what you should write is the favNum function that makes the code above work,
 
 
   //Code Here for first
+  var first = function(arr, cb){
+  cb(arr[0]);
+  };
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
   console.log('The first name in names is ', firstName)
 });
-
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
@@ -40,13 +42,15 @@ first(names, function(firstName){
 
   //Code Here for last
 
+var last = function(arr, cb){
+  var lName = arr.length - 1;
+  cb(arr[lName]);
+};
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
   console.log('The last name in names is ', lastName);
 });
-
-
-
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
@@ -57,13 +61,13 @@ last(names, function(lastName){
 
 
   //Code Here for multiply
+var multiply = function(x, y, cb){
+  cb(x * y);
+};
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
-})
-
-
-
+});
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
@@ -75,6 +79,11 @@ multiply(4, 3, function(answer){
   //Code Here for contains
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
+var contains = function(){
+  
+};
+
 contains(names, 'Colt', function(result){
   if(result === true){
     console.log('Colt is in the array');
