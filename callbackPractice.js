@@ -80,8 +80,12 @@ multiply(4, 3, function(answer){
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
-var contains = function(){
-  
+var contains = function(arr, str, cb){
+  for(var i=0; i<arr.length; i++){
+    if(arr[i] === str){
+      cb(true);
+    }
+  }
 };
 
 contains(names, 'Colt', function(result){
@@ -102,8 +106,13 @@ contains(names, 'Colt', function(result){
 
 
     //Code Here for uniq
-
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
+var uniq(arr, cb){
+  var fixedArr = [];
+  
+}
+
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
